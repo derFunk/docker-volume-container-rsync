@@ -8,7 +8,7 @@ RUN apt-get update && \
   rm -rf /var/lib/{apt,dpkg,cache,log}/
 
 EXPOSE 873
-VOLUME /docker
+VOLUME /var/www/html
 ADD ./run /usr/local/bin/run
 
 ENTRYPOINT ["/usr/local/bin/run"]

@@ -1,5 +1,5 @@
 #!/bin/bash
-VOLUME=/docker
+VOLUME=/var/www/html
 ALLOW=${ALLOW:-192.168.0.0/16 172.16.0.0/12}
 OWNER=${OWNER:-nobody}
 GROUP=${GROUP:-nogroup}
@@ -18,7 +18,7 @@ log file = /dev/stdout
     hosts allow = ${ALLOW}
     read only = false
     path = ${VOLUME}
-    comment = docker volume
+    comment = www root
 EOF
 
 exec /usr/bin/rsync --no-detach --daemon --config /etc/rsyncd.conf "$@"
