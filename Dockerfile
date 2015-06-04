@@ -1,5 +1,5 @@
 FROM debian:wheezy
-MAINTAINER TANABE Ken-ichi <nabeken@tknetworks.org>
+MAINTAINER Andreas Katzig <akatzig@chimera-entertainment.de>
 
 RUN apt-get update && \
   DEBIAN_FRONTEND=noninteractive apt-get install -yq --no-install-recommends rsync && \
